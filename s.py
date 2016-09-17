@@ -141,17 +141,17 @@ def requiredinfo():
         text = data.decode()
         quartersalary = int(text[48:52])
         yearsalary[x-2010] += quartersalary*3
-        print(x,y)
-        print(quartersalary)
+        # print(x,y)
+        # print(quartersalary)
       basesalary = basesalary + yearsalary[x-2010]
   basesalary = basesalary/5
   if area!= 'X':
   	for x in range(0,4):
   	  increase_rate[x] = (float(yearsalary[x+1]) - float(yearsalary[x]))/float(yearsalary[x+1])
-  	  increase_rate = sum(increase_rate)
-  print(increase_rate)
-  print(yearsalary)
-  print(basesalary)
+  	increase_rate = sum(increase_rate)
+  # print(increase_rate)
+  # print(yearsalary)
+  print "Your base salary is :", basesalary
 
 
 
@@ -263,7 +263,7 @@ def blah(basesalary):
   else:
       for elem in data.json():
           if str(elem[-1]) == statenumbers[states.index(area)]:
-              ratio = 1 + increase_rate
+              ratio = 1.000 + increase_rate
               if 'B20004_001E' in census_variables:
                   ratio = ratio * (float(elem[census_variables.index('B20004_001E')-1])/ float(elem[census_variables.index('B20004_001E')]))
                   counter -= 1
